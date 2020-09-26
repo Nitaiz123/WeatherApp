@@ -1,0 +1,207 @@
+*{
+    box-sizing:border-box;
+  }
+  body{
+    font-size:62.5%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  .header{
+    max-width:100%;
+    height:35rem;
+    padding:5rem;
+    background:linear-gradient(225deg,#00dcc0 0,#005af0 75%);
+    text-align:center;
+  }
+  .title{
+    max-width:45rem;
+    height:10rem;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1rem;
+    color:#fff;
+    font-size:4rem;
+    font-family: Poppins,sans-serif;
+    font-weight: 700;
+    text-align:center;
+  }
+  .search-wrapper{
+   margin-top:10.5rem;
+   width:100%;
+   height:auto;
+   display:flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+  }
+  .input-search{
+    width:100%;
+    height:4rem;
+    font-family: Poppins,sans-serif;
+    padding: 1.8rem 16rem 1.8rem 6rem;
+    border:none;
+    border-radius: 4px;
+    box-shadow: 0 15px 20px 0 rgba(0,0,0,.1);
+    color: #20202a;
+    font-size: 1.8rem;
+     
+  }
+  .search-button{
+    margin-top:15px;
+    margin-left:auto;
+    margin-right: auto;
+    font-family: Poppins,sans-serif;
+    font-weight: 700;
+    font-size:20px;
+    color: #005af0;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    padding:16px 32px;
+    cursor:pointer;
+  }
+  .search-result{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:100%;
+    height:auto;
+    padding:5px;
+  }
+  .popular-cities{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:100%;
+    height:auto;
+    padding:5px;
+  }
+  .past-search{
+     display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:100%;
+    height:auto;
+    padding:5px;
+  }
+  .weather-card{
+    width:24rem;
+    height:auto;
+    border: 1px solid #dadce0;
+    margin-right:60px;
+    margin-top:15px;
+    border-radius: 8px;
+  }
+  .cityname{
+    width:100%;
+    color:black;
+    padding: 12.8px 10px;
+    border-bottom: 1px solid #dadce0;
+    font-family:Poppins,sans-serif;
+    font-size:2rem;
+    box-sizing: inherit;
+  }
+  .weather-info{
+    display: flex;
+    width:100%;
+    box-orient: horizontal;
+    flex-direction: row;
+    box-align: center;
+    align-items: center;
+    height: 108px;
+    padding:8px 12px 16px 16px;
+    border-bottom: 1px solid #dadce0;
+  }
+  .weather-type{
+    font-family: 'Google Sans',sans-serif;
+    font-size:1.6rem;
+    width:75%;
+    height:100%;
+  }
+  .svg-img{
+    width:25%;
+    height:100%;
+  }
+  .temp-info{
+   display:flex;
+  width:100%;
+  height:58px;
+  border-bottom: 1px solid #dadce0;
+  font-family: 'Google Sans',sans-serif;
+  font-size:1rem;
+  padding:10px;
+  }
+  .name-temp{
+   width:50%;
+   height:100%;
+   padding:0.5rem
+   }
+  .fig-temp{
+  width:50%;
+  height:100%;
+  padding:0.5rem;
+  text-align: right;
+   }
+  .temp-info:last-child{
+  border-bottom:none;
+  }
+  .wrapper{
+    display: none;
+  }
+  .wrapper-1{
+    display: none;
+  }
+  
+  @media only screen and (max-width:650px) {
+    .header{
+      max-width:100%;
+      height:35rem;
+      padding:0.5rem;
+      background:linear-gradient(225deg,#00dcc0 0,#005af0 75%);
+      text-align:center;
+    }
+    
+    .input-search{
+      width:100%;
+      height:4rem;
+      font-family: Poppins,sans-serif;
+      padding: 0.5rem 4rem 0.4rem 2.5rem;
+      border:none;
+      border-radius: 4px;
+      box-shadow: 0 15px 20px 0 rgba(0,0,0,.1);
+      color: #20202a;
+      font-size: 0.9rem;
+       
+    }
+    .popular-cities{
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      width:100%;
+      height:auto;
+    }
+    .search-result{
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      width:100%;
+      height:auto;
+      
+    }
+    .past-search{
+     display:flex;
+     flex-direction:column;
+     flex-wrap:wrap;
+     width:100%;
+     height:auto;
+   }
+    .weather-card{
+      width:100%;
+      height:auto;
+      border: 1px solid #dadce0;
+      margin-top:15px;
+      border-radius:8px;
+    }
+  
+  }
