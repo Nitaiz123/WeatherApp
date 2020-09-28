@@ -124,13 +124,3 @@ function gethistory(){
 function kelvintoCelsius(temp){
     return Math.floor(temp-273.15);
 }
-function oneresult(){
- let x, i;
-  x = document.querySelectorAll(".cityname");
-  for (i = 0; i < x.length; i++) {
-    if(document.querySelector(".input-search").value==x[i].innerHTML){
-    return true;
-    }
-  }
-  return false;
-}
