@@ -95,9 +95,6 @@ let arr=['Feels Like','Maximum Temperature','Minimum Temperature','Humidity','Pr
          </div>`;  
    if(value=="searchResult"){
      document.querySelector(".wrapper").style.display="block";
-   if(oneresult()){
-   continue;
-   }
     searchResult.innerHTML+=weatherCard;
  }else if(!inputcity.value&&value!="pastsearch"){
    popularcities.innerHTML+=weatherCard;
