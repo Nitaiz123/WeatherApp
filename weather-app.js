@@ -95,6 +95,9 @@ let arr=['Feels Like','Maximum Temperature','Minimum Temperature','Humidity','Pr
          </div>`;  
    if(value=="searchResult"){
      document.querySelector(".wrapper").style.display="block";
+   if(oneresult()){
+   continue;
+   }
     searchResult.innerHTML+=weatherCard;
  }else if(!inputcity.value&&value!="pastsearch"){
    popularcities.innerHTML+=weatherCard;
@@ -123,4 +126,14 @@ function gethistory(){
 }
 function kelvintoCelsius(temp){
     return Math.floor(temp-273.15);
+}
+function oneresult(){
+ let x, i;
+  x = document.querySelectorAll(".cityname");
+  for (i = 0; i < x.length; i++) {
+    if(document.querySelector(".input-search").value==x[i].innerHTML){
+    return true;
+    }
+  }
+  return false;
 }
