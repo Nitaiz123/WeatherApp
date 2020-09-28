@@ -1,4 +1,14 @@
 var i=0;
+function oneresult(){
+  let x, i;
+   x =document.querySelector(".search-result").childNodes;
+   for (i = 0; i <x.length; i++) {
+     if(document.querySelector(".input-search").value===x[i].childNodes[1].innerHTML){
+     return true;
+     }
+   }
+   return false;
+ }
 function fetchcities(){
 Promise.all([
 	fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=f14977b8612b062bf492c3c5d1ff78d3'),
@@ -29,6 +39,8 @@ let arr=['Feels Like','Maximum Temperature','Minimum Temperature','Humidity','Pr
     valinput=res[i];
     i+=1;
    }else if(inputcity.value){
+    if(oneresult()){
+    }else{
     var parsedata={
     city:inputcity.value,
     weather:[{
@@ -49,14 +61,12 @@ let arr=['Feels Like','Maximum Temperature','Minimum Temperature','Humidity','Pr
     },
   };
     window.localStorage.setItem(Math.random(), JSON.stringify(parsedata));
-    valinput=inputcity.value;
+    valinput=inputcity.value;}
   }else if(value=="pastsearch"){
     valinput=parsedata.city;
   }
  const weatherCard=`<div class="weather-card">
-       <div class="cityname">
-         ${valinput}
-       </div>
+       <div class="cityname">${valinput}</div>
        <div class="weather-info">
          <div class="weather-type"><div>${parsedata.weather[0].description}</div>
          <span>${kelvintoCelsius(parsedata.main.temp)}&#8451;</span>
@@ -94,8 +104,10 @@ let arr=['Feels Like','Maximum Temperature','Minimum Temperature','Humidity','Pr
          <div class="fig-temp">${parsedata.wind.deg+"DEG"+" "+parsedata.wind.speed}M/S</div>
          </div>`;  
    if(value=="searchResult"){
+     if(oneresult()){
+     }else{
      document.querySelector(".wrapper").style.display="block";
-    searchResult.innerHTML+=weatherCard;
+    searchResult.innerHTML+=weatherCard;}
  }else if(!inputcity.value&&value!="pastsearch"){
    popularcities.innerHTML+=weatherCard;
  }else if(value=="pastsearch"){
@@ -124,3 +136,5 @@ function gethistory(){
 function kelvintoCelsius(temp){
     return Math.floor(temp-273.15);
 }
+
+ 
